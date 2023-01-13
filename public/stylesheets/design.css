@@ -1,0 +1,12 @@
+.form-control {
+	margin-top: 1.2rem;
+}
+.nav-link, .navbar-brand{
+	color: white;
+}
+.addproduit{
+	margin-top: 0.5em;
+}
+input{
+	width: 100%;
+}

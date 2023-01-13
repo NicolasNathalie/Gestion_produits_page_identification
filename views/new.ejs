@@ -1,0 +1,29 @@
+<%- include('partials/header') %>
+
+  <div class="container">
+    <div class="d-flex flex-column">
+      <h1 class="addproduit p-2 text-center">Add New Product</h1>
+      <form class="p-2" action="/product" method="post">
+        <div>
+          <label for="code" class="th"><b></b></label>
+          <input type="text" name="code" class="form-control" id="code" aria-describedby="codeHelp"
+            placeholder="Enter code" required>
+        </div>
+        <br>
+        <label for="description" class="th"><b></b></label>
+        <input type="text" name="description" class="form-control" id="description" aria-describedby="descriptionHelp"
+          placeholder="Enter description" required>
+        <br>
+        <label for="price" class="th"><b></b></label>
+        <input type="text" name="price" class="form-control" id="price" aria-describedby="priceHelp"
+          placeholder="Enter price" required>
+        <br>
+        <div>
+          <input class="btn btn-primary" type="submit" value="Add to DATABASE">
+        </div>
+      </form>
+      <br>
+    </div>
+  </div>
+
+  <%- include('partials/footer') %>

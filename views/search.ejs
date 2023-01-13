@@ -1,0 +1,49 @@
+<%- include('partials/header') %>
+  <div class="container">
+    <div class="d-flex flex-column">
+      <h1 class="addproduit p-2 text-center">Search Product</h1>
+      <form class="p-2" action="/search/" method="GET">
+        <div>
+          <label for="code" class="th"><b></b></label>
+          <input type="text" name="code" class="form-control" id="code" aria-describedby="codeHelp"
+            placeholder="Enter code" required>
+        </div>
+        <br>
+        <div>
+          <input class="btn btn-primary" type="submit" value="Search in Database">
+        </div>
+      </form>
+      <br>
+    </div>
+
+    <% if (locals.product) { %>
+
+      <br>
+      <h1 class="addproduit p-2 text-left text-danger">Search Result</h1>
+      <table class="table table-bordered" width="100%" cellspacing="0">
+        <thead>
+          <tr>
+            <th>Code</th>
+            <th>Description</th>
+            <th>Price</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>
+              <%= product.code %>
+            </td>
+            <td>
+              <%= product.description %>
+            </td>
+            <td>
+              <%= product.price %>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <br>
+  </div>
+  <% } %>
+    <%- include('partials/messages') %>
+      <%- include('partials/footer') %>

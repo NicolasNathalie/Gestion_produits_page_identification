@@ -1,0 +1,26 @@
+<%- include('partials/header') %>
+
+  <div class="container">
+    <div class="d-flex flex-column">
+      <h1 class="addproduit p-2 text-center">Update Product Data</h1>
+      <form class="p-2" action="/edit/<%= product.id%>?_method=put" method="post">
+        <div>
+          <input type="text" name="code" value="<%= product.code %>" class="form-control" id="code"
+            aria-describedby="codeHelp" placeholder="Enter code" required>
+        </div>
+        <br>
+        <input type="text" name="description" value="<%= product.description %>" class="form-control" id="description"
+          aria-describedby="descriptionHelp" placeholder="Enter description" required>
+        <br>
+        <input type="text" name="price" value="<%= product.price %>" class="form-control" id="price"
+          aria-describedby="priceHelp" placeholder="Enter price" required>
+        <br>
+        <div>
+          <input class="btn btn-primary" type="submit" value="Update Product">
+        </div>
+      </form>
+      <br>
+    </div>
+  </div>
+
+  <%- include('partials/footer') %>
